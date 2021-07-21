@@ -4,7 +4,7 @@ RSpec.describe User, type: :model do
   subject { described_class.new(first_name: "John",
                                 last_name: "Doe",
                                 middle_name: "Martin",
-                                id_number: 1314637)}
+                                id: 1314638)}
 
   it "is valid with valid attributes" do
     expect(subject).to be_valid
@@ -26,7 +26,7 @@ RSpec.describe User, type: :model do
   end
 
   it "is not valid without an id number" do
-    subject.id_number = nil
+    subject.id = nil
     expect(subject).to_not be_valid
   end
 
@@ -40,8 +40,8 @@ RSpec.describe User, type: :model do
     expect(subject).to_not be_valid
   end
 
-  it "is not valid if id number already exist" do
-    described_class.create(first_name: "Yan", last_name: "So", id_number: 1314637)
+  it "is not valid if id already exist" do
+    described_class.create(first_name: "Yan", last_name: "So", id: 1314638)
     expect(subject.save).to be false
   end
 end
