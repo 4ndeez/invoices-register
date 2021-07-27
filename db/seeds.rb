@@ -22,7 +22,7 @@ end
 2.times do |index|
   Operations::PerformTransferService.new(currency: currencies[1],
                                          receiver_id: users[index].id,
-                                         sender_id: users[index + 2],
+                                         sender_id: users[index + 2].id,
                                          amount: 200).call
 end
 
