@@ -12,6 +12,8 @@ gem 'sqlite3'
 gem 'puma', '~> 3.11'
 
 gem 'acts-as-taggable-on', '~> 6.0'
+gem 'faker'
+# for generating fake data
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
